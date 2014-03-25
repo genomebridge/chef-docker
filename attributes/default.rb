@@ -84,3 +84,5 @@ default['docker']['package']['action'] = 'install'
 # Source attributes
 default['docker']['source']['ref'] = 'master'
 default['docker']['source']['url'] = 'https://github.com/dotcloud/docker.git'
+
+default['docker']['graph'] = "/scratch/docker"
