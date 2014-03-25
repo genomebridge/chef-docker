@@ -28,6 +28,9 @@ DOCKER_OPTS="$DOCKER_OPTS -G <%= node['docker']['group'] %>"
 <% if node['docker']['graph'] -%>
 DOCKER_OPTS="$DOCKER_OPTS -g <%= node['docker']['graph'] %>"
 <% end -%>
+<% if node['docker']['mtu'] -%>
+DOCKER_OPTS="$DOCKER_OPTS --mtu <%= node['docker']['mtu'] %>"
+<% end -%>
 
 <% if node['docker']['ramdisk'] -%>
 DOCKER_RAMDISK=<%= node['docker']['ramdisk'] %>
