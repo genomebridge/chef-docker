@@ -25,6 +25,9 @@ DOCKER_OPTS="$DOCKER_OPTS -e <%= node['docker']['exec_driver'] %>"
 <% if node['docker']['group'] -%>
 DOCKER_OPTS="$DOCKER_OPTS -G <%= node['docker']['group'] %>"
 <% end -%>
+<% if node['docker']['graph'] -%>
+DOCKER_OPTS="$DOCKER_OPTS -g <%= node['docker']['graph'] %>"
+<% end -%>
 
 <% if node['docker']['ramdisk'] -%>
 DOCKER_RAMDISK=<%= node['docker']['ramdisk'] %>
